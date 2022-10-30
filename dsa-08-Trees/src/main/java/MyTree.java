@@ -46,4 +46,5 @@ public class MyTree {
         System.out.print(root.value+", ");
         inOrderTraversal(root.rightChild);
     }
+
 }
