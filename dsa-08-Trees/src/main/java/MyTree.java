@@ -35,6 +35,15 @@ public class MyTree {
     // PreOrder Traversal of the tree
     // Root-Left-right
     void preOrderTraversal(TNode root){
-
+        if(root==null) return;
+        System.out.print(root.value +", ");
+        preOrderTraversal(root.leftChild);
+        preOrderTraversal(root.rightChild);
+    }
+    void inOrderTraversal(TNode root){
+        if (root==null) return;
+        inOrderTraversal(root.leftChild);
+        System.out.print(root.value+", ");
+        inOrderTraversal(root.rightChild);
     }
 }
