@@ -3,4 +3,7 @@ public class TNode {
     TNode leftChild;
     TNode rightChild;
 
+    public TNode(int value) {
+        this.value = value;
+    }
 }
