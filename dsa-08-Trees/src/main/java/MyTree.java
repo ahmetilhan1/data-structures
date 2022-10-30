@@ -32,4 +32,9 @@ public class MyTree {
             }
         }
     }
+    // PreOrder Traversal of the tree
+    // Root-Left-right
+    void preOrderTraversal(TNode root){
+
+    }
 }
