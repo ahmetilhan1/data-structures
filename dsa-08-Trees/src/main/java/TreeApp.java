@@ -18,6 +18,7 @@ public class TreeApp {
         System.out.println("Level Order Traversal: ");
         tree.levelOrderTraversal();*/
 
-        System.out.println(tree.contains(88));
+        System.out.println(tree.contains(8));
+        tree.printLeaves(tree.root);
     }
 }
