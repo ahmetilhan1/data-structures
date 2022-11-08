@@ -38,22 +38,22 @@ public class MyTree {
     // PreOrder Traversal of the tree
     // Root-Left-right
     void preOrderTraversal(TNode root){
-        if(root==null) return;
-        System.out.print(root.value +", ");
-        preOrderTraversal(root.leftChild);
-        preOrderTraversal(root.rightChild);
+        if(root==null) return;// termination
+        System.out.print(root.value +", "); // visit root
+        preOrderTraversal(root.leftChild);  // visit left subtree
+        preOrderTraversal(root.rightChild); // visit right subtree
     }
     void inOrderTraversal(TNode root){
-        if (root==null) return;
+        if (root==null) return; // termination
         inOrderTraversal(root.leftChild);
         System.out.print(root.value+", ");
         inOrderTraversal(root.rightChild);
     }
     void postOrderTraversal(TNode root){
-        if (root==null) return;
-        postOrderTraversal(root.leftChild);
-        postOrderTraversal(root.rightChild);
-        System.out.print(root.value+", ");
+        if (root==null) return;// termination
+        postOrderTraversal(root.leftChild); // branch and finish left subtree
+        postOrderTraversal(root.rightChild); // branch and finish right subtree
+        System.out.print(root.value+", ");  // visit root
     }
     void levelOrderTraversal(){
         if(root==null) return;
@@ -64,7 +64,16 @@ public class MyTree {
             System.out.print(toVisit.value+", ");
             if (toVisit.leftChild!=null) queue.add(toVisit.leftChild);
             if (toVisit.rightChild!=null) queue.add(toVisit.rightChild);
-
         }
+    }
+    public boolean contains(int value){
+        if (root==null) return false;
+        TNode current= root;
+        while (current!=null) {
+            if (value<current.value) current=current.leftChild;
+            else if (value> current.value) current=current.rightChild;
+            else return true;
+        }
+        return false;
     }
 }
