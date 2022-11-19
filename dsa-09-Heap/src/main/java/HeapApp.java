@@ -13,5 +13,8 @@ public class HeapApp {
         heap.printHeap();
         heap.remove();
         heap.printHeap();
+        int[] numbers={1,2,5,6,8,21,0};
+
     }
+
 }
