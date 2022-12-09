@@ -31,6 +31,5 @@ public class TernarySearch {
         else return ternarySearchRecursive(array, data, middle1+1, middle2-1);
 
 
-        return -1;
     }
 }
